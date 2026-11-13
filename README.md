@@ -152,24 +152,6 @@ mods/           the finished mod, ready to copy into WurmLauncher\mods
 build.sh        compile the mod
 import.sh        run the importer
 ```
-
-## Troubleshooting
-
-Look in the client log for lines starting with `Wiki:`.
-
-- **Only a few entries, or old data:** the game reads `WurmLauncher\mods\wikihelper\pages.txt`, not the project copy.
-  Copy the `wikihelper` folder across again, and check `Wiki: loaded N entries`.
-- **Build says `FAILED: no game jars in ./libs`:** add the three jars as described above.
-- **Build error on a game class:** the game's GUI classes are undocumented, so a different game version can break a call.
-  Open an issue with the full error.
-- **No picture:** check the log for `Wiki: could not fetch image`, and that the game can reach the internet.
-- **Contents entry does not scroll:** open an issue with the page name.
-- **No Find in Wiki on right-click:** set `debug=true`, right-click an item, and include the `Wiki: popup ...` log lines in
-  an issue. Also check the item exists in the database.
-
-## Credits and licence
-
-- Wiki content is copied from [Wurmpedia](https://www.wurmpedia.com) and belongs to its contributors. The importer is
   for making a personal offline copy; check Wurmpedia's licence before sharing the imported data, and do not commit
   `pages.txt` or `articles/` to a public repository.
 - Built on the [Wurm Unlimited Client Mod Launcher](https://github.com/ago1024/WurmClientModLauncher) by ago1024.
