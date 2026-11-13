@@ -1,0 +1,10 @@
+# Your own entries and corrections for Wiki Helper.
+#
+# Anything here replaces the entry of the same name in pages.txt, so you can fix or extend the imported data
+# without touching it. pages.txt can be re-imported at any time; this file is never overwritten.
+# Same format as pages.txt, for example:
+#
+# @page My secret recipe
+# @alias msr
+# @section Creation
+# - Do the thing with [[Iron ribbon]]

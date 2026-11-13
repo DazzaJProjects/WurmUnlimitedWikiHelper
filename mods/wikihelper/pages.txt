@@ -1,0 +1,58 @@
+# Wurm Unlimited wiki data (copied from Wurmpedia)
+#
+# @page Name            starts an entry
+# @alias a; b           other names players might search for
+# @image URL            picture; downloaded once, then cached in mods/wiki/images
+# @examine text         the in-game examine text
+# @section Title        starts a section (shown as a brown bar)
+# - text                one line in the section
+#
+# [[Target|shown text]] makes a clickable link to another entry. [[Target]] shows the target name.
+# Links only become clickable once that entry exists in this file.
+
+@page Bulk storage bin
+@alias bsb; bulk bin; storage bin
+@image https://www.wurmpedia.com/images/thumb/c/ca/Bsb.jpg/200px-Bsb.jpg
+@examine A storage bin made from planks and strengthened with iron ribbons.
+@section Creation
+- [[Activate]] [[Iron ribbon|iron ribbon]]
+- Right-click [[Plank|plank]]
+- Open submenu "Create > [[Storage]]"
+@section Total materials
+- 25x [[Plank|planks]]
+- 4x [[Large nails|large nails]]
+- 1x [[Iron ribbon|iron ribbon]]
+@section Result
+- Bulk storage bin (20.00 kg)
+@section Skill and improvement
+- Uses [[Carpentry]] skill
+@section Properties
+- Can be [[Dye|dyed]] using 3000g of paint.
+
+@page Iron ribbon
+@alias ribbon; iron ribbons
+@image https://www.wurmpedia.com/images/thumb/0/0c/Iron_ribbon.png/200px-Iron_ribbon.png
+@examine A sturdy iron ribbon, used to strengthen constructions like chests and barrels.
+@section Creation
+- [[Activate]] [[Iron lump|iron lump]] (3.00 kg)
+- Right-click [[Large anvil|large anvil]]
+- Open submenu "Create > [[Construction material]]"
+@section Result
+- Iron ribbon (3.00 kg)
+@section Skill and improvement
+- Uses [[Blacksmithing|blacksmithing]] skill
+- Cannot be [[Improve|improved]]
+
+@page Large nails
+@alias nails; large nail; nail
+@image https://www.wurmpedia.com/images/thumb/8/8e/Nails.jpg/200px-Nails.jpg
+@examine About ten metal nails, each one long as your hand.
+@section Creation
+- [[Activate]] [[Small anvil|small anvil]]
+- Right-click [[Glowing|glowing]] [[Iron lump|iron lump]] (0.30 kg)
+- Open submenu "Create > [[Construction material]]"
+@section Result
+- 1 Large nails (0.30 kg)
+@section Skill and improvement
+- Uses [[Blacksmithing|blacksmithing]] skill
+- Cannot be [[Improve|improved]]
