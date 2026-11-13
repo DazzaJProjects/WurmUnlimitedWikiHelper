@@ -283,12 +283,13 @@ final class WikiView extends WikiComponent {
         }
         if (group) y = closePanel(groupIdx, groupTop, y, cw);
 
+        // Set the height field directly. setSize() limits a component that has no parent yet to the screen's
+        // height, and this view is laid out in its constructor before it has one: a long page was cut off at
+        // one screenful and the scroll bar could not reach the rest.
         int desired = Math.max(40, y + MARGIN);
         if (height != desired) {
-            int flags = sizeFlags;
-            sizeFlags = 0;
-            setSize(width, desired);
-            sizeFlags = flags;
+            height = desired;
+            if (parent != null) parent.childResized(this);      // let the column and scroll panel re-measure
         }
     }
 
@@ -463,7 +464,19 @@ final class WikiView extends WikiComponent {
 
     @Override
     protected void renderComponent(Queue queue, float ignoredAlpha) {
+        // A page can be tens of thousands of pixels tall (the release notes are over 60,000): only paint what is
+        // inside the scroll panel's window. This view's y already includes the scroll offset.
+        int top = Integer.MIN_VALUE, bottom = Integer.MAX_VALUE;
+        for (WurmComponent c = parent; c != null; c = c.parent) {
+            if (c instanceof WurmScrollPanel) {
+                top = c.y - 60;
+                bottom = c.y + c.height + 60;
+                break;
+            }
+        }
         for (Draw d : draws) {
+            int ay = y + d.y;
+            if (ay > bottom || ay + Math.max(d.h, 40) < top) continue;
             boolean hot = d.hit >= 0 && d.hit == hoverHit;
             if (d.onlyHover && !hot) continue;
             float r = hot ? d.hr : d.r, g = hot ? d.hg : d.g, b = hot ? d.hb : d.b;
