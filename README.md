@@ -152,9 +152,3 @@ mods/           the finished mod, ready to copy into WurmLauncher\mods
 build.sh        compile the mod
 import.sh        run the importer
 ```
-  for making a personal offline copy; check Wurmpedia's licence before sharing the imported data, and do not commit
-  `pages.txt` or `articles/` to a public repository.
-- Built on the [Wurm Unlimited Client Mod Launcher](https://github.com/ago1024/WurmClientModLauncher) by ago1024.
-- This is an unofficial fan project. It is not affiliated with or endorsed by Code Club AB or Wurmpedia. *Wurm Online* and
-  *Wurm Unlimited* belong to their owners.
-- Licence for this project's code: _add your licence here (for example MIT)_.
