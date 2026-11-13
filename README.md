@@ -93,7 +93,7 @@ Redirects (like *BSB*) become search nicknames.
 
 ## Install
 
-You copy the finished mod into the game yourself; none of the scripts touch your game folder.
+You can copy the finished mod into the game yourself (Release or from source); none of the scripts touch your game folder.
 
 The project's own **`mods/` folder is the finished mod**. Both `build.sh` and `import.sh` end with a
 **READY-TO-COPY PACKAGE** summary showing whether the jar is built and how many pages and articles it holds.
