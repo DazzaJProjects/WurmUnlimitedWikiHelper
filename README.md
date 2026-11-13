@@ -152,3 +152,4 @@ mods/           the finished mod, ready to copy into WurmLauncher\mods
 build.sh        compile the mod
 import.sh        run the importer
 ```
+Mod created using Claude
